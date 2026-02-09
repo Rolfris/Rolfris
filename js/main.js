@@ -37,7 +37,7 @@ const obs = new IntersectionObserver((entries) => {
 
 sections.forEach(sec => obs.observe(sec));
 
-// Form -> mailto
+// Form -> mailto (met datum)
 $("#quoteForm")?.addEventListener("submit", (e) => {
   e.preventDefault();
   const form = e.currentTarget;
@@ -45,15 +45,16 @@ $("#quoteForm")?.addEventListener("submit", (e) => {
   const org = form.org.value.trim();
   const type = form.type.value.trim();
   const count = form.count.value.trim();
+  const date = form.date.value;
   const msg = form.msg.value.trim();
 
   const to = "rolfriss004@gmail.com";
-
   const subject = encodeURIComponent(`Offerteaanvraag Rolfris – ${org}`);
   const body = encodeURIComponent(
 `Naam/Instelling: ${org}
 Type klant: ${type}
 Aantal rolstoelen (schatting): ${count || "-"}
+Gewenste datum: ${date}
 Bericht:
 ${msg}
 
