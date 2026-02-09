@@ -3,81 +3,333 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rolf | Website</title>
-  <meta name="description" content="Website van Rolf." />
+  <title>Rolfris | Professionele rolstoelreiniging op locatie</title>
+  <meta name="description" content="Rolfris reinigt en ontsmet rolstoelen en mobiliteitshulpmiddelen professioneel en hygiënisch op locatie voor woonzorgcentra, revalidatiecentra en particulieren." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css" />
   <script defer src="js/main.js"></script>
 </head>
 
 <body>
   <header class="header">
-    <div class="container">
-      <a class="logo" href="#">Rolf</a>
-      <nav class="nav">
-        <a href="#over">Over</a>
-        <a href="#projecten">Projecten</a>
-        <a href="#contact">Contact</a>
+    <div class="container header-row">
+      <a class="brand" href="#top" aria-label="Rolfris home">
+        <span class="brand-mark" aria-hidden="true">R</span>
+        <span class="brand-name">Rolfris</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Menu openen" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+
+      <nav class="nav" aria-label="Hoofdnavigatie">
+        <a class="nav-link" href="#diensten">Diensten</a>
+        <a class="nav-link" href="#werkwijze">Werkwijze</a>
+        <a class="nav-link" href="#prijzen">Prijzen</a>
+        <a class="nav-link" href="#duurzaam">Duurzaam</a>
+        <a class="nav-link" href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero container">
-      <h1>Welkom op mijn website 👋</h1>
-      <p>Ik leer websites maken met HTML, CSS en JavaScript.</p>
-      <div class="buttons">
-        <a class="btn" href="#projecten">Bekijk projecten</a>
-        <a class="btn btn2" href="#contact">Contact</a>
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="kicker">Professionele & hygiënische reiniging op locatie</p>
+          <h1>Propere rolstoelen, minder werkdruk, meer comfort.</h1>
+          <p class="lead">
+            Rolfris reinigt en ontsmet rolstoelen (elektrisch & niet-elektrisch) en andere mobiliteitshulpmiddelen
+            bij woonzorgcentra, revalidatiecentra én particulieren — volledig op locatie.
+          </p>
+
+          <div class="cta">
+            <a class="btn primary" href="#contact">Offerte aanvragen</a>
+            <a class="btn ghost" href="#prijzen">Bekijk prijzen</a>
+          </div>
+
+          <div class="trust">
+            <div class="trust-item">
+              <span class="trust-big">Op locatie</span>
+              <span class="trust-small">Geen verplaatsing bewoners</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-big">Snel</span>
+              <span class="trust-small">Direct weer inzetbaar</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-big">Hygiënisch</span>
+              <span class="trust-small">Grondige reiniging & ontsmetting</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="card highlight">
+            <h2 class="card-title">Waarom Rolfris?</h2>
+            <ul class="check">
+              <li>Rolstoelen worden intensief gebruikt en komen overal.</li>
+              <li>Grondig reinigen is vaak tijdrovend voor zorgpersoneel.</li>
+              <li>Wij nemen de volledige reiniging over — op jullie locatie.</li>
+            </ul>
+            <div class="mini-cta">
+              <a class="btn small" href="#werkwijze">Hoe werkt het?</a>
+              <a class="btn small ghost" href="#diensten">Wat reinigen we?</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Doelgroepen</h3>
+            <div class="chips">
+              <span class="chip">Woonzorgcentra</span>
+              <span class="chip">Revalidatiecentra</span>
+              <span class="chip">Particulieren</span>
+            </div>
+            <p class="muted">
+              Bij grotere aantallen dalen de prijzen per rolstoel — interessant voor instellingen met veel gebruikers.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="over" class="section container">
-      <h2>Over mij</h2>
-      <p>Schrijf hier kort wie je bent en wat je graag maakt.</p>
-      <div class="cards">
-        <article class="card">
-          <h3>Wat ik leer</h3>
-          <p>HTML, CSS, JavaScript, GitHub Pages…</p>
-        </article>
-        <article class="card">
-          <h3>Mijn doel</h3>
-          <p>Een mooie portfolio-site maken met echte projecten.</p>
-        </article>
+    <!-- DIENSTEN -->
+    <section class="section" id="diensten">
+      <div class="container">
+        <div class="section-head">
+          <h2>Diensten</h2>
+          <p class="muted">Onze focus ligt op rolstoelen, met uitbreiding naar andere mobiliteitshulpmiddelen.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Niet-elektrische rolstoelen</h3>
+            <p class="muted">Grondige reiniging & ontsmetting van zitvlak, armleuningen, wielen, frame en handgrepen.</p>
+          </article>
+
+          <article class="card">
+            <h3>Elektrische rolstoelen</h3>
+            <p class="muted">Veilige reiniging met aandacht voor elektronica, bediening, kappen en contactpunten.</p>
+          </article>
+
+          <article class="card">
+            <h3>Andere hulpmiddelen</h3>
+            <p class="muted">Uitbreiding naar rollators, loophulpmiddelen en andere mobiliteitshulpmiddelen.</p>
+          </article>
+        </div>
+
+        <div class="note">
+          <strong>Op locatie:</strong> wij komen naar jullie toe. Bewoners hoeven niet verplaatst te worden en hulpmiddelen zijn
+          na reiniging meteen opnieuw bruikbaar.
+        </div>
       </div>
     </section>
 
-    <section id="projecten" class="section container">
-      <h2>Projecten</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Project 1</h3>
-          <p>Korte uitleg over je project.</p>
-          <a class="link" href="#" target="_blank" rel="noreferrer">Link</a>
-        </article>
-        <article class="card">
-          <h3>Project 2</h3>
-          <p>Korte uitleg over je project.</p>
-          <a class="link" href="#" target="_blank" rel="noreferrer">Link</a>
-        </article>
-        <article class="card">
-          <h3>Project 3</h3>
-          <p>Korte uitleg over je project.</p>
-          <a class="link" href="#" target="_blank" rel="noreferrer">Link</a>
-        </article>
+    <!-- WERKWIJZE -->
+    <section class="section" id="werkwijze">
+      <div class="container">
+        <div class="section-head">
+          <h2>Werkwijze</h2>
+          <p class="muted">Snel, praktisch en zorgvriendelijk — zonder gedoe voor personeel of bewoners.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step card">
+            <div class="step-nr">1</div>
+            <div>
+              <h3>Afspraak & planning</h3>
+              <p class="muted">We plannen een moment dat past bij jullie werking. Ook mogelijk per vaste frequentie.</p>
+            </div>
+          </div>
+
+          <div class="step card">
+            <div class="step-nr">2</div>
+            <div>
+              <h3>Reiniging op locatie</h3>
+              <p class="muted">Grondige reiniging en ontsmetting met aandacht voor veiligheid en comfort.</p>
+            </div>
+          </div>
+
+          <div class="step card">
+            <div class="step-nr">3</div>
+            <div>
+              <h3>Direct weer inzetbaar</h3>
+              <p class="muted">Na de reiniging kunnen rolstoelen en hulpmiddelen meteen opnieuw gebruikt worden.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Voordelen voor zorginstellingen</h3>
+            <ul class="bullets">
+              <li>Minder werkdruk voor zorgpersoneel</li>
+              <li>Hygiënischer materiaal in gemeenschappelijke ruimtes</li>
+              <li>Geen verplaatsing van bewoners nodig</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Voordelen voor particulieren</h3>
+            <ul class="bullets">
+              <li>Meer comfort en fris gevoel</li>
+              <li>Hygiënischer in huis</li>
+              <li>Professionele aanpak zonder gedoe</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="contact" class="section container">
-      <h2>Contact</h2>
-      <p>Druk op de knop om een mail te sturen.</p>
-      <a class="btn" href="mailto:voorbeeld@mail.com">Mail mij</a>
-      <p class="small">Vervang <b>voorbeeld@mail.com</b> door jouw mail.</p>
+    <!-- PRIJZEN -->
+    <section class="section" id="prijzen">
+      <div class="container">
+        <div class="section-head">
+          <h2>Prijzen</h2>
+          <p class="muted">Transparant en eenvoudig. Bij grotere aantallen daalt de prijs per rolstoel.</p>
+        </div>
+
+        <div class="pricing">
+          <div class="price card">
+            <h3>Niet-elektrische rolstoel</h3>
+            <p class="price-tag">€12 <span class="muted">excl. btw</span></p>
+            <ul class="bullets">
+              <li>Reiniging + ontsmetting</li>
+              <li>Op locatie</li>
+              <li>Snel weer inzetbaar</li>
+            </ul>
+            <a class="btn small primary" href="#contact">Prijs aanvragen voor aantallen</a>
+          </div>
+
+          <div class="price card highlight">
+            <h3>Elektrische rolstoel</h3>
+            <p class="price-tag">€15 <span class="muted">excl. btw</span></p>
+            <ul class="bullets">
+              <li>Veilige aanpak (elektronica)</li>
+              <li>Reiniging + ontsmetting</li>
+              <li>Op locatie</li>
+            </ul>
+            <a class="btn small" href="#contact">Offerte voor instellingen</a>
+          </div>
+
+          <div class="price card">
+            <h3>Grote aantallen</h3>
+            <p class="muted">
+              Woonzorgcentrum of revalidatiecentrum met veel rolstoelen?
+              Dan maken we een scherp tarief per rolstoel.
+            </p>
+            <ul class="bullets">
+              <li>Staffelprijzen</li>
+              <li>Vaste planning mogelijk</li>
+              <li>Uitbreiding naar rollators/hulpmiddelen</li>
+            </ul>
+            <a class="btn small ghost" href="#contact">Vraag staffelprijzen</a>
+          </div>
+        </div>
+
+        <div class="note">
+          <strong>Tip:</strong> combineer meerdere rolstoelen in één bezoek voor maximale efficiëntie.
+        </div>
+      </div>
+    </section>
+
+    <!-- DUURZAAM -->
+    <section class="section" id="duurzaam">
+      <div class="container">
+        <div class="section-head">
+          <h2>Duurzame aanpak</h2>
+          <p class="muted">Hygiëne en kwaliteit, met respect voor mens en omgeving.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Ecologische producten</h3>
+            <p class="muted">We werken met ecologische reinigingsproducten waar mogelijk.</p>
+          </div>
+          <div class="card">
+            <h3>Waterbesparend</h3>
+            <p class="muted">We gebruiken technieken die waterverbruik beperken zonder aan resultaat in te boeten.</p>
+          </div>
+          <div class="card">
+            <h3>Veilig & comfort</h3>
+            <p class="muted">Aandacht voor contactpunten, veiligheid en comfort van de gebruiker.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact & offerte</h2>
+          <p class="muted">Stuur ons je vraag — we antwoorden snel met een voorstel op maat.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Rolfris</h3>
+            <p class="muted">
+              Professionele reiniging van rolstoelen en mobiliteitshulpmiddelen op locatie.
+            </p>
+
+            <div class="contact-list">
+              <div><span class="label">E-mail</span> <a class="link" href="mailto:info@rolfris.be">info@rolfris.be</a></div>
+              <div><span class="label">Telefoon</span> <a class="link" href="tel:+32123456789">+32 123 45 67 89</a></div>
+              <div><span class="label">Regio</span> <span class="muted">Vul jullie regio/provincie in</span></div>
+            </div>
+
+            <p class="muted tiny">
+              Pas e-mail/telefoon aan naar jullie echte gegevens in de HTML.
+            </p>
+          </div>
+
+          <form class="card form" id="quoteForm">
+            <h3>Offerte aanvragen</h3>
+
+            <label>
+              Naam / Instelling
+              <input name="org" type="text" placeholder="Bijv. WZC De Linde" required />
+            </label>
+
+            <label>
+              Type klant
+              <select name="type" required>
+                <option value="" selected disabled>Kies…</option>
+                <option>Woonzorgcentrum</option>
+                <option>Revalidatiecentrum</option>
+                <option>Particulier</option>
+                <option>Andere</option>
+              </select>
+            </label>
+
+            <label>
+              Aantal rolstoelen (schatting)
+              <input name="count" type="number" min="1" placeholder="Bijv. 20" />
+            </label>
+
+            <label>
+              Bericht
+              <textarea name="msg" rows="4" placeholder="Wanneer en wat wil je laten reinigen? (elektrisch/niet-elektrisch, ook rollators, …)" required></textarea>
+            </label>
+
+            <button class="btn primary" type="submit">Verstuur via e-mail</button>
+            <p class="muted tiny">Dit opent je mail-app met alle info ingevuld.</p>
+          </form>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <span>© <span id="year"></span> Rolf</span>
+    <div class="container footer-row">
+      <span>© <span id="year"></span> Rolfris</span>
+      <a class="link" href="#top">Naar boven ↑</a>
     </div>
   </footer>
 </body>
