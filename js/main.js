@@ -20,7 +20,7 @@ $$(".nav-link").forEach(link => {
 });
 
 // Active link highlight
-const sections = ["diensten", "werkwijze", "prijzen", "duurzaam", "contact"]
+const sections = ["diensten", "werkwijze", "team", "prijzen", "duurzaam", "contact"]
   .map(id => document.getElementById(id))
   .filter(Boolean);
 
