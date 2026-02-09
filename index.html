@@ -29,6 +29,7 @@
       <nav class="nav" aria-label="Hoofdnavigatie">
         <a class="nav-link" href="#diensten">Diensten</a>
         <a class="nav-link" href="#werkwijze">Werkwijze</a>
+        <a class="nav-link" href="#team">Team</a>
         <a class="nav-link" href="#prijzen">Prijzen</a>
         <a class="nav-link" href="#duurzaam">Duurzaam</a>
         <a class="nav-link" href="#contact">Contact</a>
@@ -42,6 +43,13 @@
       <div class="container hero-grid">
         <div class="hero-text">
           <p class="kicker">Professionele & hygiënische reiniging op locatie</p>
+
+          <!-- Extra zichtbaar logo in de hero -->
+          <div class="hero-brand">
+            <img src="assets/Rolstoel.png" alt="Rolfris logo" class="hero-logo">
+            <span class="hero-brand-name">Rolfris</span>
+          </div>
+
           <h1>Propere rolstoelen, minder werkdruk, meer comfort.</h1>
           <p class="lead">
             Rolfris reinigt en ontsmet rolstoelen (elektrisch & niet-elektrisch) en andere mobiliteitshulpmiddelen
@@ -174,6 +182,38 @@
       </div>
     </section>
 
+    <!-- TEAM (foto van wie er werkt) -->
+    <section class="section" id="team">
+      <div class="container">
+        <div class="section-head">
+          <h2>Wie staat er achter Rolfris?</h2>
+          <p class="muted">Een klein team met focus op hygiëne, zorgvriendelijkheid en kwaliteit op locatie.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <img src="assets/team.jpg" alt="Het team van Rolfris" class="team-img">
+            <p class="muted team-caption">
+              Upload je teamfoto als <b>assets/team.jpg</b>. (Je kan later altijd vervangen.)
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Professioneel & zorgvriendelijk</h3>
+            <p class="muted">
+              Wij komen ter plaatse en zorgen dat rolstoelen en hulpmiddelen na reiniging meteen opnieuw inzetbaar zijn.
+              Dat geeft minder werkdruk voor personeel en meer comfort voor gebruikers.
+            </p>
+            <ul class="bullets">
+              <li>Grondige reiniging + ontsmetting</li>
+              <li>Veilige aanpak (ook elektrisch)</li>
+              <li>Regio: Limburg</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- PRIJZEN -->
     <section class="section" id="prijzen">
       <div class="container">
@@ -261,7 +301,11 @@
 
         <div class="grid-2">
           <div class="card">
-            <h3>Rolfris</h3>
+            <div class="card-head">
+              <img src="assets/Rolstoel.png" alt="Rolfris logo" class="card-logo">
+              <h3>Rolfris</h3>
+            </div>
+
             <p class="muted">
               Professionele reiniging van rolstoelen en mobiliteitshulpmiddelen op locatie.
             </p>
@@ -274,7 +318,10 @@
           </div>
 
           <form class="card form" id="quoteForm">
-            <h3>Offerte aanvragen</h3>
+            <div class="card-head">
+              <img src="assets/Rolstoel.png" alt="Rolfris logo" class="card-logo">
+              <h3>Offerte aanvragen</h3>
+            </div>
 
             <label>
               Naam / Instelling
