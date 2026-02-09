@@ -47,8 +47,7 @@ $("#quoteForm")?.addEventListener("submit", (e) => {
   const count = form.count.value.trim();
   const msg = form.msg.value.trim();
 
-  // Pas dit aan naar jullie echte e-mail:
-  const to = "info@rolfris.be";
+  const to = "rolfriss004@gmail.com";
 
   const subject = encodeURIComponent(`Offerteaanvraag Rolfris – ${org}`);
   const body = encodeURIComponent(
