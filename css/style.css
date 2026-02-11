@@ -314,7 +314,8 @@ input:focus, textarea:focus, select:focus{ border-color: rgba(79,140,255,.60); }
     position: fixed; right: 16px; top: 66px;
     display:none; flex-direction: column; gap: 8px;
     padding: 12px; border: 1px solid var(--line);
-    background: rgba(11,16,32,.92); border-radius: 16px; box-shadow: var(--shadow);
+    background: rgba(11,16,32,.92);
+    border-radius: 16px; box-shadow: var(--shadow);
     min-width: 190px;
   }
   .nav.open{ display:flex; }
