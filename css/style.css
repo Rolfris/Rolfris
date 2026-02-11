@@ -68,8 +68,8 @@ a{ color:inherit; text-decoration:none; }
 
 /* HEADER: logo rond + vervaagt subtiel in achtergrond */
 .header .logo{
-  height: 70px;
-  width: 70px;
+  height: 56px;
+  width: 56px;
   border-radius: 50%;
   padding: 3px;
   background: rgba(255,255,255,.06);   /* minder contrast */
@@ -280,13 +280,37 @@ input, textarea, select{
 }
 input:focus, textarea:focus, select:focus{ border-color: rgba(79,140,255,.60); }
 
+/* ✅ Select dropdown altijd leesbaar (ook bij OS/Chrome dark mode) */
+select{
+  color-scheme: dark;
+  background-color: rgba(255,255,255,.03);
+  color: var(--text);
+}
+select option{
+  background-color: #121833;         /* vaste donkere achtergrond */
+  color: rgba(255,255,255,.92);      /* vaste lichte tekst */
+}
+select option:disabled{
+  color: rgba(255,255,255,.65);
+}
+
+/* Extra: Windows high-contrast / forced colors */
+@media (forced-colors: active){
+  select, select option{
+    forced-color-adjust: none;
+    background: Canvas;
+    color: CanvasText;
+    border: 1px solid CanvasText;
+  }
+}
+
 /* CONTACT */
 .contact-list{ display:grid; gap: 10px; margin-top: 12px; }
 .label{ display:inline-block; min-width: 80px; color: rgba(255,255,255,.55); }
 .link{ color: rgba(79,140,255,.95); }
 .link:hover{ text-decoration: underline; }
 
-/* Card header met logo (blijft rond) */
+/* Card header met logo */
 .card-head{
   display:flex;
   align-items:center;
