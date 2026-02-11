@@ -11,15 +11,15 @@
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" sizes="any">
 
-  <!-- Open Graph -->
+  <!-- Open Graph / Social preview -->
   <meta property="og:site_name" content="Rolfris">
   <meta property="og:title" content="Rolfris | Professionele rolstoelreiniging op locatie">
   <meta property="og:description" content="Rolfris reinigt en ontsmet rolstoelen en mobiliteitshulpmiddelen professioneel en hygiënisch op locatie.">
-  <meta property="og:image" content="https://rolfris.github.io/Rolfris/assets/og-image.png">
+  <!-- Tip: maak later een echte og-image.png (1200x630) in assets -->
+  <meta property="og:image" content="https://rolfris.github.io/Rolfris/assets/Rolstoel.png">
   <meta property="og:url" content="https://rolfris.github.io/Rolfris/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://rolfris.github.io/Rolfris/assets/og-image.png">
 
   <!-- Schema.org -->
   <script type="application/ld+json">
@@ -348,16 +348,17 @@
               <input name="org" type="text" placeholder="Bijv. WZC De Linde" required />
             </label>
 
-            <!-- Custom select -->
+            <!-- Custom dropdown (altijd leesbaar) -->
             <label>
               Type klant
-              <input type="hidden" name="type" id="typeHidden" required>
-              <div class="select" id="typeSelect" aria-label="Type klant">
-                <button type="button" class="select-trigger" aria-haspopup="listbox" aria-expanded="false">
-                  <span class="select-value" data-placeholder="Kies…">Kies…</span>
+              <input type="hidden" name="type" id="typeHidden" required />
+              <div class="select" id="typeSelect">
+                <button class="select-trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+                  <span class="select-value">Kies…</span>
                   <span class="select-caret" aria-hidden="true">▾</span>
                 </button>
-                <div class="select-menu" role="listbox" tabindex="-1">
+
+                <div class="select-menu" role="listbox">
                   <button type="button" class="select-option" data-value="Woonzorgcentrum" role="option">Woonzorgcentrum</button>
                   <button type="button" class="select-option" data-value="Revalidatiecentrum" role="option">Revalidatiecentrum</button>
                   <button type="button" class="select-option" data-value="Particulier" role="option">Particulier</button>
@@ -411,6 +412,11 @@
       </div>
 
       <a class="link" href="#top">Naar boven ↑</a>
+    </div>
+
+    <div class="sbp-note">
+      Rolfris is een small business project (SBP) onder de vleugels van vzw Vlaamse Jonge Ondernemingen (Vlajo), een vzw die zich tot doel stelt bij jongeren de zin voor initiatief en ondernemingsgeest te ontwikkelen. Gezien de korte levensduur heeft een SBP geen ondernemingsnummer en bezit het hierdoor ook geen rechtspersoonlijkheid. Een SBP is niet aan btw onderworpen (beslissing van de btw-administratie 20/12/89), maar is – omwille van het authentieke leerproces – wel 'btw-plichtig' aan vzw Vlajo. Meer info:
+      <a class="sbp-link" href="https://www.vlajo.org" target="_blank" rel="noreferrer">www.vlajo.org</a>.
     </div>
   </footer>
 </body>
