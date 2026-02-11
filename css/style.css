@@ -55,8 +55,8 @@ a{ color:inherit; text-decoration:none; }
 
 /* logo rond */
 .logo{
-  height: 90px;
-  width: 90px;
+  height: 80px;
+  width: 80px;
   object-fit: cover;
   border-radius: 50%;
   padding: 4px;
