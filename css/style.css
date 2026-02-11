@@ -59,7 +59,7 @@ a{ color:inherit; text-decoration:none; }
   width: 80px;
   object-fit: cover;
   border-radius: 50%;
-  padding: 3px;
+  padding: 1px;
   background: rgba(255,255,255,.12);
   display:block;
   filter: drop-shadow(0 10px 22px rgba(0,0,0,.45));
