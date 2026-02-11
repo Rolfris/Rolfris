@@ -40,24 +40,21 @@ a{ color:inherit; text-decoration:none; }
   padding: 14px 0;
 }
 
-/* Brand in header moet "overgaan in achtergrond" */
+/* Brand in header gaat over in achtergrond */
 .brand{
   display:flex;
   align-items:center;
   gap:12px;
   font-weight: 900;
   letter-spacing: -.02em;
-  padding: 6px 0;                 /* minder badge-gevoel */
+  padding: 4px 0;
+  background: transparent;
+  border: none;
   border-radius: 0;
-  background: transparent;         /* geen aparte achtergrond */
-  border: 1px solid transparent;   /* geen rand */
 }
-.brand:hover{
-  opacity: .95;
-}
-.brand-name{ font-size: 1.15rem; }
+.brand:hover{ opacity: .95; }
 
-/* LOGO – standaard (voor andere plaatsen) rond */
+/* Logo standaard (hero & cards) */
 .logo{
   height: 64px;
   width: 64px;
@@ -69,19 +66,20 @@ a{ color:inherit; text-decoration:none; }
   filter: drop-shadow(0 10px 22px rgba(0,0,0,.45));
 }
 
-/* ✅ HEADER: logo NIET rond + geen “badge” look */
+/* Header-logo: overgaat in achtergrond (niet rond, geen achtergrond) */
 .header .logo{
-  height: 58px;
-  width: auto;               /* behoudt verhoudingen */
-  border-radius: 0;          /* niet rond */
-  padding: 0;                /* geen cirkel-padding */
-  background: transparent;   /* gaat over in de header */
-  filter: none;              /* cleaner in de header */
+  height: 56px;
+  width: auto;
+  border-radius: 0;
+  padding: 0;
+  background: transparent;
+  filter: none;
+  mix-blend-mode: lighten;
 }
 
-/* ✅ HEADER: enkel tekst groter */
+/* Header-tekst groter */
 .header .brand-name{
-  font-size: 1.45rem;        /* groter dan elders */
+  font-size: 1.45rem;
   letter-spacing: -.03em;
 }
 
@@ -308,9 +306,6 @@ input:focus, textarea:focus, select:focus{ border-color: rgba(79,140,255,.60); }
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
 }
-.team-caption{
-  margin-top: 10px;
-}
 
 /* FOOTER */
 .footer{
@@ -342,7 +337,7 @@ input:focus, textarea:focus, select:focus{ border-color: rgba(79,140,255,.60); }
   .hero-grid, .grid-3, .steps, .pricing{ grid-template-columns: 1fr; }
 }
 @media (max-width: 720px){
-  .header .logo{ height: 50px; }
+  .header .logo{ height: 48px; }
   .header .brand-name{ font-size: 1.25rem; }
 
   .hero-logo{ height: 58px; width: 58px; }
