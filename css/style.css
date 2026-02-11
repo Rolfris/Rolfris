@@ -367,16 +367,17 @@ input:focus, textarea:focus{ border-color: rgba(79,140,255,.60); }
 
 /* SBP / VLAJO tekst */
 .sbp-note{
-  max-width: 1120px;
-  margin: 10px auto 0;
-  padding: 12px 4vw 0;
+  max-width: 900px;
+  margin: 14px auto 0;
+  padding: 14px 4vw 0;
   border-top: 1px solid var(--line);
   color: rgba(255,255,255,.65);
   font-size: .92rem;
   line-height: 1.5;
+  text-align: center;
 }
 .sbp-link{
-  color: rgba(79,140,255,.95);
+  color: rgba(255,255,255,.62);
   text-decoration: none;
 }
 .sbp-link:hover{ text-decoration: underline; }
