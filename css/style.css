@@ -68,8 +68,8 @@ a{ color:inherit; text-decoration:none; }
 
 /* HEADER: logo rond + vervaagt subtiel in achtergrond */
 .header .logo{
-  height: 56px;
-  width: 56px;
+  height: 70px;
+  width: 70px;
   border-radius: 50%;
   padding: 3px;
   background: rgba(255,255,255,.06);   /* minder contrast */
