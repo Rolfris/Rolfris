@@ -6,25 +6,22 @@
   <title>Rolfris | Professionele rolstoelreiniging op locatie</title>
   <meta name="description" content="Rolfris reinigt en ontsmet rolstoelen en mobiliteitshulpmiddelen professioneel en hygiënisch op locatie voor woonzorgcentra, revalidatiecentra en particulieren." />
 
-  <!-- Canonical (helpt Google begrijpen wat de hoofd-URL is) -->
   <link rel="canonical" href="https://rolfris.github.io/Rolfris/" />
 
-  <!-- Favicon (submap-correct) -->
+  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" sizes="any">
 
-  <!-- Open Graph / Social preview (submap-correct) -->
+  <!-- Open Graph -->
   <meta property="og:site_name" content="Rolfris">
   <meta property="og:title" content="Rolfris | Professionele rolstoelreiniging op locatie">
   <meta property="og:description" content="Rolfris reinigt en ontsmet rolstoelen en mobiliteitshulpmiddelen professioneel en hygiënisch op locatie.">
   <meta property="og:image" content="https://rolfris.github.io/Rolfris/assets/og-image.png">
   <meta property="og:url" content="https://rolfris.github.io/Rolfris/">
   <meta property="og:type" content="website">
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://rolfris.github.io/Rolfris/assets/og-image.png">
 
-  <!-- Schema.org (helpt Google: sitenaam + logo) -->
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -351,15 +348,22 @@
               <input name="org" type="text" placeholder="Bijv. WZC De Linde" required />
             </label>
 
+            <!-- Custom select -->
             <label>
               Type klant
-              <select name="type" required>
-                <option value="" selected disabled>Kies…</option>
-                <option>Woonzorgcentrum</option>
-                <option>Revalidatiecentrum</option>
-                <option>Particulier</option>
-                <option>Andere</option>
-              </select>
+              <input type="hidden" name="type" id="typeHidden" required>
+              <div class="select" id="typeSelect" aria-label="Type klant">
+                <button type="button" class="select-trigger" aria-haspopup="listbox" aria-expanded="false">
+                  <span class="select-value" data-placeholder="Kies…">Kies…</span>
+                  <span class="select-caret" aria-hidden="true">▾</span>
+                </button>
+                <div class="select-menu" role="listbox" tabindex="-1">
+                  <button type="button" class="select-option" data-value="Woonzorgcentrum" role="option">Woonzorgcentrum</button>
+                  <button type="button" class="select-option" data-value="Revalidatiecentrum" role="option">Revalidatiecentrum</button>
+                  <button type="button" class="select-option" data-value="Particulier" role="option">Particulier</button>
+                  <button type="button" class="select-option" data-value="Andere" role="option">Andere</button>
+                </div>
+              </div>
             </label>
 
             <label>
