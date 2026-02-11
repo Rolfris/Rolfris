@@ -40,20 +40,24 @@ a{ color:inherit; text-decoration:none; }
   padding: 14px 0;
 }
 
+/* Brand in header moet "overgaan in achtergrond" */
 .brand{
   display:flex;
   align-items:center;
   gap:12px;
   font-weight: 900;
   letter-spacing: -.02em;
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: rgba(255,255,255,.06);
-  border: 1px solid var(--line);
+  padding: 6px 0;                 /* minder badge-gevoel */
+  border-radius: 0;
+  background: transparent;         /* geen aparte achtergrond */
+  border: 1px solid transparent;   /* geen rand */
+}
+.brand:hover{
+  opacity: .95;
 }
 .brand-name{ font-size: 1.15rem; }
 
-/* LOGO – standaard rond */
+/* LOGO – standaard (voor andere plaatsen) rond */
 .logo{
   height: 64px;
   width: 64px;
@@ -65,11 +69,20 @@ a{ color:inherit; text-decoration:none; }
   filter: drop-shadow(0 10px 22px rgba(0,0,0,.45));
 }
 
-/* Alleen header-logo groter */
+/* ✅ HEADER: logo NIET rond + geen “badge” look */
 .header .logo{
-  height: 78px;
-  width: 78px;
-  padding: 4px;
+  height: 58px;
+  width: auto;               /* behoudt verhoudingen */
+  border-radius: 0;          /* niet rond */
+  padding: 0;                /* geen cirkel-padding */
+  background: transparent;   /* gaat over in de header */
+  filter: none;              /* cleaner in de header */
+}
+
+/* ✅ HEADER: enkel tekst groter */
+.header .brand-name{
+  font-size: 1.45rem;        /* groter dan elders */
+  letter-spacing: -.03em;
 }
 
 /* NAV */
@@ -133,10 +146,10 @@ a{ color:inherit; text-decoration:none; }
   margin-bottom: 10px;
 }
 
-/* HERO LOGO */
+/* Hero-logo blijft rond */
 .hero-logo{
-  height: 86px;
-  width: 86px;
+  height: 70px;
+  width: 70px;
   object-fit: cover;
   border-radius: 50%;
   padding: 6px;
@@ -269,7 +282,13 @@ input:focus, textarea:focus, select:focus{ border-color: rgba(79,140,255,.60); }
 .link{ color: rgba(79,140,255,.95); }
 .link:hover{ text-decoration: underline; }
 
-/* Card header logo */
+/* Card header met logo (blijft rond) */
+.card-head{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom: 8px;
+}
 .card-logo{
   height: 44px;
   width: 44px;
@@ -288,6 +307,9 @@ input:focus, textarea:focus, select:focus{ border-color: rgba(79,140,255,.60); }
   border-radius: 16px;
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
+}
+.team-caption{
+  margin-top: 10px;
 }
 
 /* FOOTER */
@@ -320,8 +342,10 @@ input:focus, textarea:focus, select:focus{ border-color: rgba(79,140,255,.60); }
   .hero-grid, .grid-3, .steps, .pricing{ grid-template-columns: 1fr; }
 }
 @media (max-width: 720px){
-  .header .logo{ height: 60px; width: 60px; padding: 4px; }
-  .hero-logo{ height: 72px; width: 72px; }
+  .header .logo{ height: 50px; }
+  .header .brand-name{ font-size: 1.25rem; }
+
+  .hero-logo{ height: 58px; width: 58px; }
   .nav-toggle{ display:block; }
   .nav{
     position: fixed; right: 16px; top: 66px;
