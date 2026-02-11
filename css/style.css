@@ -382,6 +382,80 @@ input:focus, textarea:focus{ border-color: rgba(79,140,255,.60); }
 }
 .sbp-link:hover{ text-decoration: underline; }
 
+/* ===========================
+   WERKWIJZE – PROFESSIONELER
+   (nieuwe verbeteringen)
+   =========================== */
+
+/* Iets meer ademruimte rond de sectie */
+#werkwijze{
+  padding-top: 84px;
+}
+
+/* Gelijk ritme & hoogte voor stap-cards */
+#werkwijze .steps{
+  align-items: stretch;
+  gap: 16px;
+}
+
+/* Strakkere, subtielere stap-cards */
+#werkwijze .step.card{
+  padding: 20px;
+  min-height: 140px;
+  background: rgba(255,255,255,.055);
+  box-shadow: 0 10px 26px rgba(0,0,0,.28);
+}
+
+/* Betere typografie binnen de stappen */
+#werkwijze .step h3{
+  font-size: 1.08rem;
+  letter-spacing: -.01em;
+  margin-bottom: 8px;
+}
+#werkwijze .step p{
+  font-size: .98rem;
+  line-height: 1.65;
+}
+
+/* Step badge groter & cleaner */
+#werkwijze .step-nr{
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
+  font-size: .95rem;
+  border: 1px solid rgba(79,140,255,.55);
+  background: rgba(79,140,255,.14);
+  box-shadow: 0 10px 20px rgba(0,0,0,.25);
+}
+
+/* Voordelen-cards strakker */
+#werkwijze .grid-2 .card{
+  padding: 20px;
+  background: rgba(255,255,255,.055);
+  box-shadow: 0 10px 26px rgba(0,0,0,.28);
+}
+
+/* Bullets vervangen door checkmarks */
+#werkwijze .bullets{
+  list-style: none;
+  padding-left: 0;
+  margin-top: 12px;
+}
+#werkwijze .bullets li{
+  position: relative;
+  padding-left: 26px;
+  margin: 10px 0;
+  line-height: 1.55;
+}
+#werkwijze .bullets li::before{
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(34,197,94,.95);
+  opacity: .95;
+}
+
 /* RESPONSIVE */
 @media (max-width: 980px){
   .hero-grid, .grid-3, .steps, .pricing{ grid-template-columns: 1fr; }
