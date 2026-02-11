@@ -1,5 +1,5 @@
 :root{
-  --bg:#121833;
+  --bg:#121833; /* iets lichter dan eerst */
   --text: rgba(255,255,255,.92);
   --muted: rgba(255,255,255,.70);
   --line: rgba(255,255,255,.14);
@@ -10,7 +10,6 @@
 
 *{ box-sizing:border-box; }
 html{ scroll-behavior:smooth; }
-
 body{
   margin:0;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -47,43 +46,23 @@ a{ color:inherit; text-decoration:none; }
   gap:12px;
   font-weight: 900;
   letter-spacing: -.02em;
-  padding: 4px 0;
-  background: transparent;
-  border: none;
-  border-radius: 0;
+  padding: 8px 12px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid var(--line);
 }
-.brand:hover{ opacity: .95; }
+.brand-name{ font-size: 1.15rem; }
 
+/* logo rond */
 .logo{
-  height: 64px;
-  width: 64px;
+  height: 58px;
+  width: 58px;
   object-fit: cover;
   border-radius: 50%;
   padding: 4px;
   background: rgba(255,255,255,.12);
-  display: block;
+  display:block;
   filter: drop-shadow(0 10px 22px rgba(0,0,0,.45));
-}
-
-.header .logo{
-  height: 56px;
-  width: 56px;
-  border-radius: 50%;
-  padding: 3px;
-  background: rgba(255,255,255,.06);
-  opacity: .9;
-  filter: drop-shadow(0 6px 14px rgba(0,0,0,.25));
-  transition: opacity .2s ease, filter .2s ease, background .2s ease;
-}
-.header .logo:hover{
-  opacity: 1;
-  background: rgba(255,255,255,.12);
-  filter: drop-shadow(0 10px 22px rgba(0,0,0,.35));
-}
-
-.header .brand-name{
-  font-size: 1.45rem;
-  letter-spacing: -.03em;
 }
 
 /* NAV */
@@ -146,17 +125,15 @@ a{ color:inherit; text-decoration:none; }
   gap:12px;
   margin-bottom: 10px;
 }
-
 .hero-logo{
   height: 70px;
-  width: 70px;
+  width:70px;
   object-fit: cover;
   border-radius: 50%;
   padding: 6px;
   background: rgba(255,255,255,.12);
   filter: drop-shadow(0 14px 28px rgba(0,0,0,.50));
 }
-
 .hero-brand-name{
   font-weight: 900;
   letter-spacing: -.03em;
@@ -276,7 +253,7 @@ input, textarea{
 }
 input:focus, textarea:focus{ border-color: rgba(79,140,255,.60); }
 
-/* ✅ Custom Select (altijd leesbaar) */
+/* Custom dropdown (Type klant) */
 .select{ position: relative; }
 .select-trigger{
   width: 100%;
@@ -296,11 +273,12 @@ input:focus, textarea:focus{ border-color: rgba(79,140,255,.60); }
   border-color: rgba(79,140,255,.60);
 }
 .select-caret{ opacity: .9; }
+
 .select-menu{
   position:absolute;
   left:0; right:0;
   top: calc(100% + 8px);
-  display:none;
+  display:none;              /* belangrijk: niet altijd zichtbaar */
   border-radius: 14px;
   border: 1px solid var(--line);
   background: rgba(18,24,51,.98);
@@ -335,6 +313,7 @@ input:focus, textarea:focus{ border-color: rgba(79,140,255,.60); }
 .link{ color: rgba(79,140,255,.95); }
 .link:hover{ text-decoration: underline; }
 
+/* Card header met logo */
 .card-head{
   display:flex;
   align-items:center;
@@ -351,6 +330,7 @@ input:focus, textarea:focus{ border-color: rgba(79,140,255,.60); }
   filter: drop-shadow(0 10px 18px rgba(0,0,0,.35));
 }
 
+/* TEAM foto */
 .team-img{
   width: 100%;
   height: 320px;
@@ -365,7 +345,7 @@ input:focus, textarea:focus{ border-color: rgba(79,140,255,.60); }
   border-top: 1px solid var(--line);
   background: rgba(18,24,51,.75);
   backdrop-filter: blur(10px);
-  padding: 22px 0;
+  padding: 22px 0 14px;
 }
 .footer-row{ display:flex; justify-content:space-between; align-items:center; gap: 12px; color: var(--muted); }
 
@@ -385,22 +365,35 @@ input:focus, textarea:focus{ border-color: rgba(79,140,255,.60); }
   transform: translateY(-1px);
 }
 
+/* SBP / VLAJO tekst */
+.sbp-note{
+  max-width: 1120px;
+  margin: 10px auto 0;
+  padding: 12px 4vw 0;
+  border-top: 1px solid var(--line);
+  color: rgba(255,255,255,.65);
+  font-size: .92rem;
+  line-height: 1.5;
+}
+.sbp-link{
+  color: rgba(79,140,255,.95);
+  text-decoration: none;
+}
+.sbp-link:hover{ text-decoration: underline; }
+
 /* RESPONSIVE */
 @media (max-width: 980px){
   .hero-grid, .grid-3, .steps, .pricing{ grid-template-columns: 1fr; }
 }
 @media (max-width: 720px){
-  .header .logo{ height: 48px; width: 48px; }
-  .header .brand-name{ font-size: 1.25rem; }
-
+  .logo{ height: 48px; width: 48px; }
   .hero-logo{ height: 58px; width: 58px; }
   .nav-toggle{ display:block; }
   .nav{
     position: fixed; right: 16px; top: 66px;
     display:none; flex-direction: column; gap: 8px;
     padding: 12px; border: 1px solid var(--line);
-    background: rgba(11,16,32,.92);
-    border-radius: 16px; box-shadow: var(--shadow);
+    background: rgba(11,16,32,.92); border-radius: 16px; box-shadow: var(--shadow);
     min-width: 190px;
   }
   .nav.open{ display:flex; }
