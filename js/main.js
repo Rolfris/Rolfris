@@ -37,7 +37,48 @@ const obs = new IntersectionObserver((entries) => {
 
 sections.forEach(sec => obs.observe(sec));
 
-// Form -> mailto (met datum)
+/* ✅ Custom select: Type klant */
+const typeSelect = $("#typeSelect");
+const typeHidden = $("#typeHidden");
+const typeTrigger = $(".select-trigger", typeSelect);
+const typeValue = $(".select-value", typeSelect);
+const typeOptions = $$(".select-option", typeSelect);
+
+function closeSelect() {
+  typeSelect?.classList.remove("open");
+  typeTrigger?.setAttribute("aria-expanded", "false");
+}
+
+typeTrigger?.addEventListener("click", () => {
+  const open = typeSelect.classList.toggle("open");
+  typeTrigger.setAttribute("aria-expanded", String(open));
+});
+
+typeOptions.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const val = btn.dataset.value;
+    typeHidden.value = val;
+    typeValue.textContent = val;
+
+    // aria-selected
+    typeOptions.forEach(o => o.setAttribute("aria-selected", "false"));
+    btn.setAttribute("aria-selected", "true");
+
+    closeSelect();
+  });
+});
+
+// Close on outside click / escape
+document.addEventListener("click", (e) => {
+  if (!typeSelect) return;
+  if (!typeSelect.contains(e.target)) closeSelect();
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeSelect();
+});
+
+/* Form -> mailto (met datum) */
 $("#quoteForm")?.addEventListener("submit", (e) => {
   e.preventDefault();
   const form = e.currentTarget;
@@ -47,6 +88,12 @@ $("#quoteForm")?.addEventListener("submit", (e) => {
   const count = form.count.value.trim();
   const date = form.date.value;
   const msg = form.msg.value.trim();
+
+  // extra check (required op hidden input werkt niet overal even goed)
+  if (!type) {
+    alert("Kies aub een type klant.");
+    return;
+  }
 
   const to = "rolfriss004@gmail.com";
   const subject = encodeURIComponent(`Offerteaanvraag Rolfris – ${org}`);
