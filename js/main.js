@@ -37,7 +37,7 @@ const obs = new IntersectionObserver((entries) => {
 
 sections.forEach(sec => obs.observe(sec));
 
-/* ✅ Custom select: Type klant */
+/* Custom dropdown: Type klant */
 const typeSelect = $("#typeSelect");
 const typeHidden = $("#typeHidden");
 const typeTrigger = $(".select-trigger", typeSelect);
@@ -57,6 +57,8 @@ typeTrigger?.addEventListener("click", () => {
 typeOptions.forEach(btn => {
   btn.addEventListener("click", () => {
     const val = btn.dataset.value;
+
+    // set hidden value for form submit
     typeHidden.value = val;
     typeValue.textContent = val;
 
@@ -68,17 +70,18 @@ typeOptions.forEach(btn => {
   });
 });
 
-// Close on outside click / escape
+// close when clicking outside
 document.addEventListener("click", (e) => {
   if (!typeSelect) return;
   if (!typeSelect.contains(e.target)) closeSelect();
 });
 
+// close on Escape
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeSelect();
 });
 
-/* Form -> mailto (met datum) */
+// Form -> mailto (met datum)
 $("#quoteForm")?.addEventListener("submit", (e) => {
   e.preventDefault();
   const form = e.currentTarget;
@@ -89,7 +92,6 @@ $("#quoteForm")?.addEventListener("submit", (e) => {
   const date = form.date.value;
   const msg = form.msg.value.trim();
 
-  // extra check (required op hidden input werkt niet overal even goed)
   if (!type) {
     alert("Kies aub een type klant.");
     return;
