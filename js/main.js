@@ -81,34 +81,13 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeSelect();
 });
 
-// Form -> mailto
+// Form validatie: Type klant moet gekozen zijn (Formspree verstuurt)
 $("#quoteForm")?.addEventListener("submit", (e) => {
-  e.preventDefault();
   const form = e.currentTarget;
-
-  const org = form.org.value.trim();
   const type = form.type.value.trim();
-  const count = form.count.value.trim();
-  const date = form.date.value;
-  const msg = form.msg.value.trim();
 
   if (!type) {
+    e.preventDefault();
     alert("Kies aub een type klant.");
-    return;
   }
-
-  const to = "rolfriss004@gmail.com";
-  const subject = encodeURIComponent(`Offerteaanvraag Rolfris – ${org}`);
-  const body = encodeURIComponent(
-`Naam of instelling: ${org}
-Type klant: ${type}
-Aantal rolstoelen (indicatie): ${count || "-"}
-Gewenste datum: ${date}
-Bericht:
-${msg}
-
-Verzonden via: ${window.location.href}`
-  );
-
-  window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
 });
