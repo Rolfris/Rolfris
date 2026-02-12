@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bedankt | Rolfris</title>
+  <meta name="description" content="Bedankt voor je aanvraag. We nemen zo snel mogelijk contact met je op." />
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Gebruik dezelfde CSS als je site -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* Kleine pagina-specifieke tweaks */
+    .thanks-wrap{
+      min-height: calc(100vh - 110px);
+      display:grid;
+      place-items:center;
+      padding: 84px 0 40px;
+    }
+    .thanks-card{
+      width:min(760px, 92vw);
+      text-align:center;
+    }
+    .thanks-icon{
+      width: 64px;
+      height: 64px;
+      border-radius: 18px;
+      margin: 0 auto 12px;
+      display:grid;
+      place-items:center;
+      border: 1px solid rgba(34,197,94,.35);
+      background: rgba(34,197,94,.10);
+      box-shadow: 0 12px 30px rgba(0,0,0,.28);
+      font-size: 30px;
+    }
+    .thanks-actions{
+      display:flex;
+      justify-content:center;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top: 18px;
+    }
+    .small-note{
+      margin-top: 12px;
+      color: rgba(255,255,255,.62);
+      font-size: .92rem;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header-row">
+      <a class="brand" href="index.html#top" aria-label="Rolfris home">
+        <img src="assets/Rolstoel.png" alt="Rolfris logo" class="logo">
+        <span class="brand-name">Rolfris</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="thanks-wrap">
+    <div class="card thanks-card">
+      <div class="thanks-icon">✓</div>
+      <h1 style="margin-bottom:10px;">Bedankt voor je aanvraag!</h1>
+      <p class="muted" style="margin:0 auto; max-width: 60ch;">
+        We hebben je bericht goed ontvangen en nemen zo snel mogelijk contact met je op.
+      </p>
+
+      <div class="thanks-actions">
+        <a class="btn primary" href="index.html#top">Terug naar home</a>
+        <a class="btn" href="index.html#contact">Nog een aanvraag</a>
+        <a class="btn ghost" href="tel:+32497164780">Bel ons</a>
+      </div>
+
+      <p class="small-note">
+        Tip: controleer ook even je spam/ongewenste e-mail als je geen reactie ziet.
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <span>© <span id="year"></span> Rolfris</span>
+      <a class="link" href="index.html#top">Naar boven ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
