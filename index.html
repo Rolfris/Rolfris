@@ -8,8 +8,10 @@
 
   <link rel="canonical" href="https://rolfris.github.io/Rolfris/" />
 
+  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" sizes="any">
 
+  <!-- Open Graph / Social preview -->
   <meta property="og:site_name" content="Rolfris">
   <meta property="og:title" content="Rolfris | Professionele rolstoelreiniging op locatie">
   <meta property="og:description" content="Rolfris reinigt en ontsmet rolstoelen en mobiliteitshulpmiddelen professioneel en hygiënisch op locatie.">
@@ -18,6 +20,7 @@
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
 
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -316,7 +319,7 @@
         </div>
 
         <div class="grid-2">
-          <!-- LINKS: CONTACTKAART -->
+          <!-- LINKS -->
           <div class="card">
             <div class="card-head">
               <img src="assets/Rolstoel.png" alt="Rolfris logo" class="card-logo">
@@ -343,20 +346,31 @@
             </div>
           </div>
 
-          <!-- RECHTS: FORMULIER -->
-          <form class="card form" id="quoteForm">
+          <!-- RECHTS: FORMSPREE FORM -->
+          <form class="card form" id="quoteForm"
+                action="https://formspree.io/f/mreaewgk"
+                method="POST">
+
             <div class="card-head">
               <img src="assets/Rolstoel.png" alt="Rolfris logo" class="card-logo">
               <h3>Offerte aanvragen</h3>
             </div>
+
+            <!-- Formspree helpers -->
+            <input type="hidden" name="_subject" value="Nieuwe offerteaanvraag via Rolfris website">
+            <input type="hidden" name="_template" value="table">
 
             <label>
               Naam of instelling
               <input name="org" type="text" placeholder="Bijv. WZC De Linde" required />
             </label>
 
+            <label>
+              E-mail (voor antwoord)
+              <input name="email" type="email" placeholder="naam@voorbeeld.be" required />
+            </label>
+
             <div class="form-grid">
-              <!-- Custom dropdown -->
               <label>
                 Type klant
                 <input type="hidden" name="type" id="typeHidden" required />
@@ -388,12 +402,16 @@
 
             <label>
               Bericht
-              <textarea name="msg" rows="4" placeholder="Welke hulpmiddelen wil je laten reinigen? (elektrisch/niet-elektrisch)\nAantal + locatie + eventuele voorkeurdatum." required></textarea>
+              <textarea name="msg" rows="4" placeholder="Welke hulpmiddelen wil je laten reinigen? (elektrisch/niet-elektrisch)
+Aantal + locatie + eventuele voorkeurdatum." required></textarea>
             </label>
+
+            <!-- Honeypot anti-spam -->
+            <input type="text" name="_gotcha" style="display:none">
 
             <div class="form-actions">
               <button class="btn primary" type="submit">Offerte aanvragen</button>
-              <p class="help">Je mailprogramma opent met een ingevulde aanvraag.</p>
+              <p class="help">Je ontvangt een bevestiging na het verzenden.</p>
               <p class="help small">We gebruiken je gegevens enkel om je aanvraag te beantwoorden.</p>
             </div>
           </form>
