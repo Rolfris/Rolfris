@@ -81,7 +81,7 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeSelect();
 });
 
-// Form -> mailto (met datum)
+// Form -> mailto
 $("#quoteForm")?.addEventListener("submit", (e) => {
   e.preventDefault();
   const form = e.currentTarget;
@@ -100,9 +100,9 @@ $("#quoteForm")?.addEventListener("submit", (e) => {
   const to = "rolfriss004@gmail.com";
   const subject = encodeURIComponent(`Offerteaanvraag Rolfris – ${org}`);
   const body = encodeURIComponent(
-`Naam/Instelling: ${org}
+`Naam of instelling: ${org}
 Type klant: ${type}
-Aantal rolstoelen (schatting): ${count || "-"}
+Aantal rolstoelen (indicatie): ${count || "-"}
 Gewenste datum: ${date}
 Bericht:
 ${msg}
