@@ -58,11 +58,9 @@ typeOptions.forEach(btn => {
   btn.addEventListener("click", () => {
     const val = btn.dataset.value;
 
-    // set hidden value for form submit
     typeHidden.value = val;
     typeValue.textContent = val;
 
-    // aria-selected
     typeOptions.forEach(o => o.setAttribute("aria-selected", "false"));
     btn.setAttribute("aria-selected", "true");
 
@@ -70,24 +68,50 @@ typeOptions.forEach(btn => {
   });
 });
 
-// close when clicking outside
 document.addEventListener("click", (e) => {
   if (!typeSelect) return;
   if (!typeSelect.contains(e.target)) closeSelect();
 });
 
-// close on Escape
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeSelect();
 });
 
-// Form validatie: Type klant moet gekozen zijn (Formspree verstuurt)
-$("#quoteForm")?.addEventListener("submit", (e) => {
-  const form = e.currentTarget;
-  const type = form.type.value.trim();
+// Form -> Formspree (AJAX) -> redirect naar bedankt.html
+$("#quoteForm")?.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
+  const form = e.currentTarget;
+
+  const type = form.type?.value?.trim?.() || "";
   if (!type) {
-    e.preventDefault();
     alert("Kies aub een type klant.");
+    return;
+  }
+
+  const endpoint = form.action; // https://formspree.io/f/mreaewgk
+  const data = new FormData(form);
+
+  try {
+    const res = await fetch(endpoint, {
+      method: "POST",
+      body: data,
+      headers: { "Accept": "application/json" }
+    });
+
+    if (res.ok) {
+      window.location.href = "bedankt.html";
+      return;
+    }
+
+    let msg = "Verzenden mislukt. Probeer opnieuw.";
+    try {
+      const json = await res.json();
+      if (json?.errors?.length) msg = json.errors[0].message || msg;
+    } catch (_) {}
+
+    alert(msg);
+  } catch (err) {
+    alert("Geen verbinding. Probeer opnieuw.");
   }
 });
